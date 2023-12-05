@@ -27,12 +27,6 @@ Users should be able to:
 
 
 
-
-### Links
-
-- Solution URL: [My solution URL here](https://your-solution-url.com)
-- Live Site URL: [My live site URL here](https://your-live-site-url.com)
-
 ## My process
 
 ### Built with
