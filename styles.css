@@ -1,0 +1,419 @@
+/* 
+=============
+Variables
+=============
+ */
+
+ :root {
+    /* layout */
+    --primary-bgr: rgb(252, 250, 249);
+    --secondary-bgr: rgb(250, 116, 83);
+
+    /* buttons */
+    --ios-btn: rgb(25, 24, 38);
+    --ios-btn-hover: rgb(102, 226, 220);
+    --android-btn: rgb(252, 250, 249);
+    --android-btn-hover: rgb(255, 185, 100);
+
+    /* typography */
+    --ff: 'IBM Plex Sans', sans-serif;
+ }
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+
+*{
+    box-sizing: border-box; 
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 1440px;
+    background-image: url('./assets/bg-main-desktop.png');
+}
+
+h1,
+h2 {
+    font-family: var(--ff);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 52px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.primary-btn {
+    height: 61px;
+    width: 333px;
+    font-size: 18px;
+    font-family: var(--ff);
+    border: none;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+     width: auto;
+    }
+ }
+ @media only screen and (max-width: 375px) {
+     body {
+      width: auto;
+     }
+  }
+ 
+ 
+ 
+/*
+=============== 
+Header Styles
+===============
+*/
+
+header {
+    width: 100%;
+    height: 120px;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 61px;
+    margin-left: 166px;
+}
+
+  
+li {
+    list-style: none;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+    header ul {
+        margin-top: 61px;
+        margin-left: 39px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    header {
+        width: 100%;
+    }
+    header ul {
+        margin-top: 39px;
+        margin-left: 24px;
+    }
+}
+
+/*
+=============== 
+Preview Styles
+===============
+*/
+
+.preview {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    margin: 0;
+
+}
+
+.preview-text {
+    width: 825px;
+    font-size: 60px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+.preview-text h1{
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.preview-img{
+    position: relative;
+    top: -120px;
+    left: 400px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .preview {
+        margin-bottom: 60px;   
+    }
+
+    .preview-text h1 {
+        font-size: 60px;
+        line-height: 60px;
+        margin-top: 0;
+    }
+    .preview-text {
+        width: 520px;
+        height: 332px;
+    }
+    .preview-img img{
+        height: 400px;
+        width: 266px;    
+    }
+
+    .preview-img {
+        left: 65%;
+        height: 400px;
+        width: 266px;  
+        position: absolute;
+    }
+   
+}
+
+@media only screen and (max-width: 375px) {
+    .preview-img {
+        display: none;
+    }  
+
+    .preview {
+       width: 100%;
+       margin-bottom: 40px;
+    }
+
+    .preview-text {
+        height: 327px;
+        width: 320px;
+        top: 10px;
+        left: 50px;
+    }
+
+    .preview-text h1 {
+        font-size: 48px;
+        
+    }
+}
+
+/*
+=============== 
+Main Styles
+===============
+*/
+
+.main {
+    width: 1110px;
+    height: 600px;
+    background-color: var(--ios-btn);
+    margin-top: 321px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.main-patern {
+    display: flex;
+    justify-content: center;
+}
+
+.main-phone img {
+    position: relative;
+    height: 642px;
+    width: 312px;
+    left: 15%;
+    top: -700px;
+}
+
+.main-text {
+    position: relative;
+    top: -1000px;
+    left: 55%;
+    background-color: var(--secondary-bgr);
+    width: 446px;
+    height: 625px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    color: var(--primary-bgr);
+    padding-left: 54px;
+    padding-top: 58px;
+}
+
+.main-text span {
+    font-size: 48px;
+    font-weight: bold;
+    padding-right: 10px;   
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    padding-top: 39px;
+    margin-bottom: 10px;
+}
+
+.ios {
+    background-color: var(--ios-btn);
+    color: var(--primary-bgr);
+    margin-bottom: 16px;
+}
+
+.android {
+    background-color: var(--primary-bgr);
+}
+
+button img {
+    padding-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+    }
+    .main-phone img {
+        height: 556px;
+        width: 270px;
+    }
+    .main-text {
+        width: 399px;
+        height: 546px;
+        padding-left: 20px;
+        padding-right: 20px;
+        left: 40%;
+        top: -900px;
+    }
+    .primary-btn {
+        height: 61px;
+        width: 296px;  
+        margin: auto;
+    }
+    
+    .price {
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .main-patern {
+        height: 420px;
+        width: 280px;
+    }
+
+    .main-phone img {
+        height: 430px;
+        width: 209px;
+        left: auto;
+        top: -600px;
+    }
+    .main-text {
+       width: 100%;
+       height: 546px;
+       padding-left: 40px;
+       top: -85%;
+       left: 0;
+    }
+    .primary-btn {
+        height: 61px;
+        width: 296px;  
+    }
+    .android {
+        margin-bottom: 48px;
+    }
+}
+
+/*
+=============== 
+Footer Styles
+===============
+*/
+
+footer {
+    width: 1100px;
+    height: 79px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 287px;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 137px;
+}
+
+.footer-text p {
+    line-height: 0;
+    font-size: 12px;
+}
+
+.footer-icons {
+    padding-left: 359px;
+}
+
+.footer-icons img {
+    padding-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        width: 100%;
+        flex-direction: column;
+        padding-left: 32px;
+    }
+
+    .footer-icons img{
+        float: right;
+        padding-right: 20px;
+        padding-bottom: 40px;
+    }
+
+    .footer-text {
+        padding: 0;
+        padding-top: 32px;
+    }
+}
+
+@media only screen and (max-width: 375px)  {
+    footer {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 24px;
+        margin-top: 500px;
+    }
+
+    .footer-icons {
+        display: flex;
+        padding: 0;
+        padding-top: 64px;
+        padding-bottom: 80px;
+    }
+
+    .footer-text {
+        padding: 0;
+        padding-top: 32px;
+    }
+}
