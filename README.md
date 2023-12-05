@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [My live site URL here](https://your-live-site-url.com](https://mari-devop.github.io/equalizer-landing-page/)
+- Live Site URL: [My live site URL here](https://mari-devop.github.io/equalizer-landing-page/)
 
 ## My process
 
